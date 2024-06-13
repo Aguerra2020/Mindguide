@@ -1,0 +1,42 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('psicologia.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff; /* Color de texto blanco para mejor contraste con un fondo oscuro */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: rgba(0, 66, 133, 0.9); /* Semi-transparente */
+    padding: 0.5rem 1rem;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .nav-link {
+    color: #ffffff;
+}
+
+.navbar-light .nav-link:hover {
+    color: #ffd700;
+}
+
+.jumbotron {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    color: #ffffff;
+}
+
+footer {
+    background-color: #002f4b;
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}

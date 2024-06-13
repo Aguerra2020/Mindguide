@@ -1,0 +1,103 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F0F8FF; /* Alice Blue */
+    color: #333333; /* Dark Gray */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Asegura que el contenido llene al menos la pantalla completa */
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: #005a87; /* Strong Blue */
+    padding: 0.5rem 1rem;
+}
+
+.navbar-dark .navbar-brand,
+.navbar-dark .nav-link {
+    color: #ffffff; /* White */
+}
+
+.navbar-dark .nav-link:hover {
+    color: #ffd700; /* Gold */
+}
+
+footer {
+    background-color: #005a87; /* Strong Blue */
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    margin-top: auto; /* Asegura que el footer se mantenga al fondo */
+}
+
+.container {
+    flex: 1; /* Toma el espacio disponible entre el navbar y el footer */
+    padding-bottom: 50px; /* Espacio adicional para evitar superposición con el footer */
+}
+
+.form-control {
+    border-radius: 0.25rem;
+}
+
+.btn-primary {
+    background-color: #005a87; /* Strong Blue */
+    border-color: #005a87;
+    color: #ffffff;
+}
+
+.btn-google {
+    background-color: #ffffff; /* Blanco */
+    color: #000000; /* Negro */
+    border: 1px solid black; /* Borde negro */
+}
+
+.btn-facebook {
+    background-color: #4267B2; /* Facebook Blue */
+    border-color: #4267B2;
+    color: #ffffff; /* Blanco */
+}
+
+.text-center p {
+    margin-top: 20px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2 {
+    color: #005a87; /* Azul fuerte para títulos */
+}
+
+.forum-thread {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.forum-post {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rounded-circle {
+    border-radius: 50%;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}

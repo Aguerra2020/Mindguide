@@ -1,0 +1,54 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F0F8FF; /* Alice Blue, suave y calmante */
+    color: #333333; /* Color oscuro para el texto, asegurando legibilidad */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.navbar {
+    background-color: #005a87; /* Azul oscuro, proporciona un fuerte contraste */
+    padding: 0.5rem 1rem;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .nav-link {
+    color: #ffffff;
+}
+
+.navbar-light .nav-link:hover {
+    color: #ffd700;
+}
+
+footer {
+    background-color: #002f4b; /* Azul marino */
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.list-group-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+
+.star-rating {
+    color: gold;
+    font-size: larger;
+}
+
+.form-select {
+    width: auto;
+    display: inline-block;
+}
+
+.btn-primary {
+    margin-top: 10px;
+}
