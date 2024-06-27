@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Mindguide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-header img {
+            width: 80px;
+        }
+
+        .login-header h2 {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #005a87; /* Conservamos el color especificado */
+        }
+
+        .form-control {
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary {
+            background-color: #005a87; /* Usamos el color especificado */
+            border: none;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #004060; /* Color ligeramente más oscuro para el hover */
+        }
+
+        .social-login-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 0.5rem;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        .social-login-btn img {
+            margin-right: 10px;
+            width: 20px; /* Ajuste del tamaño del logo */
+        }
+
+        .btn-google {
+            background-color: #db4437;
+            color: #ffffff;
+        }
+
+        .btn-google:hover {
+            background-color: #a33327;
+        }
+
+        .btn-facebook {
+            background-color: #4267b2;
+            color: #ffffff;
+        }
+
+        .btn-facebook:hover {
+            background-color: #314e81;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #005a87;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Mindguide</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="foro.html">Foro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calificaciones.html">Calificaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reservarcita.html">Reserva tu cita</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="suscripciones.html">Suscripciones</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="login-container">
+                    <div class="login-header">
+                        <img src="logo.jpg" alt="Mindguide Logo">
+                        <h2>Iniciar sesión</h2>
+                    </div>
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Usuario</label>
+                            <input type="text" class="form-control" id="username" placeholder="Ingrese su usuario" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+                    </form>
+                    <div class="mt-4 text-center">
+                        <p>O inicia sesión con</p>
+                        <button class="btn btn-google social-login-btn w-100 mb-2">
+                            <img src="https://fonts.gstatic.com/s/i/productlogos/googleg/v6/24px.svg" alt="Google"> Iniciar sesión con Google
+                        </button>
+                        <button class="btn btn-facebook social-login-btn w-100">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"> Iniciar sesión con Facebook
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        Derechos reservados © Mindguide 2024
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

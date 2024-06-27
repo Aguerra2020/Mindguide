@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F0F8FF;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: #005a87; /* Azul fuerte */
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff;
+}
+
+.nav-link:hover {
+    color: #ffd700; /* Dorado */
+}
+
+footer {
+    background-color: #005a87; /* Azul fuerte */
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    margin-top: auto;
+}
+
+.container {
+    flex: 1;
+    padding-bottom: 50px;
+}
+
+.form-control, .form-select {
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: #005a87; /* Azul fuerte */
+    border-color: #005a87;
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-google, .btn-facebook {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.btn-google img, .btn-facebook img {
+    margin-right: 10px;
+}
+
+/* Estilo para tarjetas */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Mejora de la imagen de fondo */
+.jumbotron {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    color: #ffffff;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+

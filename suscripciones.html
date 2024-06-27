@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planes de Suscripción - Mindguide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .modal-header, .modal-footer {
+            border: none;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Mindguide</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="foro.html">Foro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calificaciones.html">Calificaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reservarcita.html">Reserva tu cita</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="suscripciones.html">Suscripciones</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Planes de Suscripción</h1>
+        <p class="text-center mb-5">Elige el plan que mejor se adapte a tus necesidades y comienza a mejorar tu salud mental hoy mismo.</p>
+        <div class="row">
+            <!-- Suscripción Básica -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Suscripción Básica</h3>
+                        <p class="price">Gratis</p>
+                        <ul class="feature-list">
+                            <li>Acceso a contenidos básicos</li>
+                            <li>Bot de asistencia 24/7</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#subscriptionModal" data-plan="Suscripción Básica">Elegir</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Suscripción Premium Mensual -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Premium Mensual</h3>
+                        <p class="price">S/. 69.9 <span class="text-muted">Soles/mes</span></p>
+                        <ul class="feature-list">
+                            <li>Todas las funcionalidades</li>
+                            <li>Terapia virtual con psicólogos certificados</li>
+                            <li>Meditación guiada</li>
+                            <li>Contenido educativo completo</li>
+                            <li>Seguimiento del progreso</li>
+                            <li>Comunidad de apoyo</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#subscriptionModal" data-plan="Premium Mensual">Elegir</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Suscripción Premium Trimestral -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Premium Trimestral</h3>
+                        <p class="price">S/. 119 <span class="text-muted">Soles/trimestre</span></p>
+                        <ul class="feature-list">
+                            <li>Todas las funcionalidades</li>
+                            <li>Terapia virtual con psicólogos certificados</li>
+                            <li>Meditación guiada</li>
+                            <li>Contenido educativo completo</li>
+                            <li>Seguimiento del progreso</li>
+                            <li>Comunidad de apoyo</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#subscriptionModal" data-plan="Premium Trimestral">Elegir</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Suscripción Premium Anual -->
+            <div class="col-md-4 offset-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Premium Anual</h3>
+                        <p class="price">S/. 359 <span class="text-muted">Soles/año</span></p>
+                        <ul class="feature-list">
+                            <li>Todas las funcionalidades</li>
+                            <li>Terapia virtual con psicólogos certificados</li>
+                            <li>Meditación guiada</li>
+                            <li>Contenido educativo completo</li>
+                            <li>Seguimiento del progreso</li>
+                            <li>Comunidad de apoyo</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#subscriptionModal" data-plan="Premium Anual">Elegir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para confirmar suscripción -->
+    <div class="modal fade" id="subscriptionModal" tabindex="-1" aria-labelledby="subscriptionModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="subscriptionModalLabel">Confirmar Suscripción</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Estás a punto de elegir el <strong><span id="selectedPlan"></span></strong>.</p>
+                    <p>Por favor, confirma tu selección para proceder con el pago.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Confirmar y Pagar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white mt-5 py-3 text-center">
+        Derechos reservados © Mindguide 2024
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('subscriptionModal').addEventListener('show.bs.modal', function (event) {
+            const button = event.relatedTarget;
+            const plan = button.getAttribute('data-plan');
+            const modalTitle = document.getElementById('selectedPlan');
+            modalTitle.textContent = plan;
+        });
+    </script>
+</body>
+</html>

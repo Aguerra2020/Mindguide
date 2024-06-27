@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegir Psicólogo y Reservar Cita - Mindguide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .star-rating {
+            color: gold;
+            font-size: larger;
+        }
+
+        .form-control, .form-select {
+            border-radius: 0.25rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal-header, .modal-footer {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Mindguide</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="foro.html">Foro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calificaciones.html">Calificaciones</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="reservarcita.html">Reserva tu cita</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="suscripciones.html">Suscripciones</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Elige tu Psicólogo y Reserva tu Cita</h1>
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="search" placeholder="Buscar psicólogo por nombre...">
+            </div>
+            <div class="col-md-4">
+                <select class="form-select" id="specialization">
+                    <option value="">Filtrar por especialización</option>
+                    <option value="Terapia Cognitiva Conductual">Terapia Cognitiva Conductual</option>
+                    <option value="Psicología Clínica y Familiar">Psicología Clínica y Familiar</option>
+                    <option value="Terapia de Pareja">Terapia de Pareja</option>
+                    <option value="Ansiedad y Depresión">Ansiedad y Depresión</option>
+                    <option value="Adolescentes y Adultos Jóvenes">Adolescentes y Adultos Jóvenes</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <select class="form-select" id="rating">
+                    <option value="">Ordenar por calificación</option>
+                    <option value="5">★★★★★</option>
+                    <option value="4">★★★★☆ y más</option>
+                    <option value="3">★★★☆☆ y más</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row" id="psychologist-list">
+            <!-- Listado de psicólogos -->
+            <!-- Terapia Cognitiva Conductual -->
+            <div class="col-md-4 mb-4" data-specialization="Terapia Cognitiva Conductual" data-rating="5">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="psicologo1.jpg" alt="Dr. Juan Perez" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px;">
+                        <h5 class="card-title">Dr. Juan Perez</h5>
+                        <p class="card-text">Especialista en terapia cognitiva conductual</p>
+                        <p class="star-rating">★★★★★</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal" data-name="Dr. Juan Perez">Elegir y Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-specialization="Terapia Cognitiva Conductual" data-rating="5">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="psicologo4.jpg" alt="Dra. Andrea Hernández" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px;">
+                        <h5 class="card-title">Dra. Andrea Hernández</h5>
+                        <p class="card-text">Especialista en terapia cognitiva conductual</p>
+                        <p class="star-rating">★★★★★</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal" data-name="Dra. Andrea Hernández">Elegir y Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-specialization="Terapia Cognitiva Conductual" data-rating="5">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="psicologo5.jpg" alt="Dra. Lucía Fuentes" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px;">
+                        <h5 class="card-title">Dra. Lucía Fuentes</h5>
+                        <p class="card-text">Especialista en terapia cognitiva conductual</p>
+                        <p class="star-rating">★★★★★</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal" data-name="Dra. Lucía Fuentes">Elegir y Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Psicología Clínica y Familiar -->
+            <div class="col-md-4 mb-4" data-specialization="Psicología Clínica y Familiar" data-rating="4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="psicologo6.jpg" alt="Dra. María González" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px;">
+                        <h5 class="card-title">Dra. María González</h5>
+                        <p class="card-text">Especialista en psicología clínica y familiar</p>
+                        <p class="star-rating">★★★★☆</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal" data-name="Dra. María González">Elegir y Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-specialization="Psicología Clínica y Familiar" data-rating="3">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="psicologo2.jpg" alt="Dr. Pablo Rojas" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px;">
+                        <h5 class="card-title">Dr. Pablo Rojas</h5>
+                        <p class="card-text">Especialista en psicología clínica y familiar</p>
+                        <p class="star-rating">★★★☆☆</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal" data-name="Dr. Pablo Rojas">Elegir y Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-specialization="Psicología Clínica y Familiar" data-rating="4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="psicologo3.jpg" alt="Dr. Alberto Morales" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px;">
+                        <h5 class="card-title">Dr. Alberto Morales</h5>
+                        <p class="card-text">Especialista en psicología clínica y familiar</p>
+                        <p class="star-rating">★★★★☆</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal" data-name="Dr. Alberto Morales">Elegir y Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Terapia de Pareja -->
+            <div class="col-md-4 mb-4" data-specialization="Terapia de Pareja" data-rating="5">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="psicologo7.jpg" alt="Dra. Sofía Martínez" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px;">
+                        <h5 class="card-title">Dra. Sofía Martínez</h5>
+                        <p class="card-text">Especialista en terapia de pareja</p>
+                        <p class="star-rating">★★★★★</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal" data-name="Dra. Sofía Martínez">Elegir y Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-specialization="Terapia de Pareja" data-rating="5">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="psicologo8.jpg" alt="Dra. Luisa Gómez" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px;">
+                        <h5 class="card-title">Dra. Luisa Gómez</h5>
+                        <p class="card-text">Especialista en terapia de pareja</p>
+                        <p class="star-rating">★★★★★</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal" data-name="Dra. Luisa Gómez">Elegir y Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-specialization="Terapia de Pareja" data-rating="5">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="psicologo9.jpg" alt="Dra. Paula Martín" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px;">
+                        <h5 class="card-title">Dra. Paula Martín</h5>
+                        <p class="card-text">Especialista en terapia de pareja</p>
+                        <p class="star-rating">★★★★★</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal" data-name="Dra. Paula Martín">Elegir y Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Ansiedad y Depresión -->
+            <div class="col-md-4 mb-4" data-specialization="Ansiedad y Depresión" data-rating="3">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="psicologo11.jpg" alt="Dr. Miguel Fernández" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px;">
+                        <h5 class="card-title">Dr. Miguel Fernández</h5>
+                        <p class="card-text">Especialista en ansiedad y depresión</p>
+                        <p class="star-rating">★★★☆☆</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal" data-name="Dr. Miguel Fernández">Elegir y Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-specialization="Ansiedad y Depresión" data-rating="4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="psicologo12.jpg" alt="Dr. José Martínez" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px;">
+                        <h5 class="card-title">Dr. José Martínez</h5>
+                        <p class="card-text">Especialista en ansiedad y depresión</p>
+                        <p class="star-rating">★★★★☆</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal" data-name="Dr. José Martínez">Elegir y Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Adolescentes y Adultos Jóvenes -->
+            <div class="col-md-4 mb-4" data-specialization="Adolescentes y Adultos Jóvenes" data-rating="4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="psicologo13.jpg" alt="Dr. Miguel Mejia" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px;">
+                        <h5 class="card-title">Dr. Miguel Mejia</h5>
+                        <p class="card-text">Especialista en adolescentes y adultos jóvenes</p>
+                        <p class="star-rating">★★★★☆</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal" data-name="Dr. Miguel Mejia">Elegir y Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-specialization="Adolescentes y Adultos Jóvenes" data-rating="5">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="psicologo10.jpg" alt="Dra. Natalia Santos" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px;">
+                        <h5 class="card-title">Dra. Natalia Santos</h5>
+                        <p class="card-text">Especialista en adolescentes y adultos jóvenes</p>
+                        <p class="star-rating">★★★★★</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal" data-name="Dra. Natalia Santos">Elegir y Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Trastornos de Alimentación -->
+            <div class="col-md-4 mb-4" data-specialization="Trastornos de Alimentación" data-rating="4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="psicologo14.jpg" alt="Dr. Carlos López" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px;">
+                        <h5 class="card-title">Dr. Carlos López</h5>
+                        <p class="card-text">Especialista en trastornos de alimentación</p>
+                        <p class="star-rating">★★★★☆</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal" data-name="Dr. Carlos López">Elegir y Reservar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para reservar cita -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookingModalLabel">Reservar Cita con <span id="psychologistName"></span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="appointmentDate" class="form-label">Fecha</label>
+                            <input type="date" class="form-control" id="appointmentDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="appointmentTime" class="form-label">Hora</label>
+                            <input type="time" class="form-control" id="appointmentTime" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Reservar</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white mt-5 py-3 text-center">
+        Derechos reservados © Mindguide 2024
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('search').addEventListener('input', filterPsychologists);
+        document.getElementById('specialization').addEventListener('change', filterPsychologists);
+        document.getElementById('rating').addEventListener('change', filterPsychologists);
+
+        function filterPsychologists() {
+            const search = document.getElementById('search').value.toLowerCase();
+            const specialization = document.getElementById('specialization').value;
+            const rating = document.getElementById('rating').value;
+
+            document.querySelectorAll('#psychologist-list .col-md-4').forEach(card => {
+                const name = card.querySelector('.card-title').textContent.toLowerCase();
+                const spec = card.getAttribute('data-specialization');
+                const rate = card.getAttribute('data-rating');
+
+                if ((name.includes(search) || !search) &&
+                    (spec === specialization || !specialization) &&
+                    (rate >= rating || !rating)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        document.getElementById('bookingModal').addEventListener('show.bs.modal', function (event) {
+            const button = event.relatedTarget;
+            const psychologistName = button.getAttribute('data-name');
+            const modalTitle = document.getElementById('psychologistName');
+            modalTitle.textContent = psychologistName;
+        });
+    </script>
+</body>
+</html>

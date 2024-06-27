@@ -1,0 +1,56 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F5F5F5; /* Very Light Grey, neutral y profesional */
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.navbar {
+    background-color: #546E7A; /* Blue Grey, ofrece un aire de seriedad y profesionalismo */
+    padding: 0.5rem 1rem;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .nav-link {
+    color: #ffffff;
+}
+
+.navbar-light .nav-link:hover {
+    color: #ffd700;
+}
+
+footer {
+    background-color: #455A64; /* Dark Blue Grey */
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.list-group-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+
+.star-rating {
+    color: gold;
+    font-size: larger;
+}
+
+.form-select {
+    width: auto;
+    display: inline-block;
+}
+
+.btn-primary {
+    margin-top: 10px;
+    background-color: #78909C; /* Light Blue Grey */
+    border-color: #546E7A;
+}

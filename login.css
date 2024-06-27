@@ -1,0 +1,45 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #E8F5E9; /* Green White, tranquilo y refrescante */
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.navbar {
+    background-color: #00695C; /* Teal Green, tranquilidad con un toque de sofisticación */
+    padding: 0.5rem 1rem;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .nav-link {
+    color: #ffffff;
+}
+
+.navbar-light .nav-link:hover {
+    color: #ffd700;
+}
+
+footer {
+    background-color: #004D40; /* Deep Teal */
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.container {
+    padding-top: 2rem;
+}
+
+.form-control {
+    border-radius: 0.25rem;
+}
+
+.btn-primary {
+    background-color: #00897B; /* Lighter Teal */
+    border-color: #00695C;
+}
